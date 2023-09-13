@@ -56,7 +56,7 @@ jobs:
     - name: build package
       run: |
         cd src
-        ../ecc template.bpf.c template.h
+        ../ecc replace.bpf.c common.h
 
     - name: Publish
       if:   github.event_name == 'push' && github.ref == 'refs/heads/main'
